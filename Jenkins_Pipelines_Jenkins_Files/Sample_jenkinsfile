@@ -27,7 +27,8 @@ pipeline {
                 // Build your application here (e.g., compile, package, etc.)
                 sh '''
                 ls
-                echo "In Build Step"
+                pwd
+                echo " This is Build Step "
                 '''
             }
         }
@@ -35,13 +36,16 @@ pipeline {
         stage('Test') {
             steps {
                 // Run your tests (e.g., unit tests, integration tests)
-                sh 'echo "In Test Step"'
+                sh '''
+                  echo " this is the Testing Phase all test case done by this stage "
+                '''
             }
         }
 
         stage('Deploy') {
             steps {
                 // Deploy your application to a target environment (e.g., staging, production)
+                sh ' echo " This is the Deploy Phase'
                 sh 'echo "Value of ENV Varaible is "$MY_ENV_VAR""'
             }
         }
