@@ -3,7 +3,7 @@ pipeline {
 
     environment {
         // Define environment variables here
-        MY_ENV_VAR = 'Custom Value'
+        MY_ENV_VAR = 'Shinra Tensei'
     }
 
     stages {
@@ -46,7 +46,7 @@ pipeline {
             steps {
                 // Deploy your application to a target environment (e.g., staging, production)
                 sh ' echo " This is the Deploy Phase "'
-                sh 'echo "Value of ENV Varaible is "$MY_ENV_VAR""'
+                sh 'echo "This world shall Know Pain "$MY_ENV_VAR""'
             }
         }
     }
