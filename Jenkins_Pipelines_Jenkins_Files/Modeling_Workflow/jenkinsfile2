@@ -1,39 +1,79 @@
 pipeline {
     agent any
     environment {
-        RELEASE='20.04'
+        RELEASE='P A I N ARC'
     }
     stages {
-        stage('Build') {
+        stage('EPISODE 190') {
             agent any
             environment {
-                LOG_LEVEL='INFO'
+                LOG_LEVEL='P A I N'
             }
             steps {
-                echo "Building release ${RELEASE} with log level ${LOG_LEVEL}..."
+                echo " ${RELEASE}"
+                echo "Tendo ${LOG_LEVEL} Enter the Village"
             }
         }
-        stage('Test') {
+        stage('EPISODE 191') {
+            environment{
+                ARC ='LEAF VILLAGE'
+            }
             steps {
-                echo "Testing release ${RELEASE}..."
+                 echo " ${RELEASE}"
+                echo "Distruction of ${ARC}"
             }
         }
-        stage('Deploy') {
+
+         stage('EPISODE 192') {
+            environment{
+                ARC ='DEATH'
+            }
+            steps {
+                 echo " ${RELEASE}"
+                echo "Kakashi ${ARC}"
+            }
+        }
+
+         stage('EPISODE 193') {
+            environment{
+                ARC ='FEEL PAIN , ACCEPT PAIN , KNOW PAIN'
+            }
+            steps {
+                 echo " ${RELEASE}"
+                echo "${ARC} this world shall Know pain"
+            }
+        }
+
+         stage('EPISODE 194') {
+            environment{
+                ARC ='SHINRA TENSHI'
+            }
+            steps {
+                 echo " ${RELEASE}"
+                echo "${ARC}"
+            }
+        }
+
+        stage('EPISODE 195') {
+            environment{
+                END = 'TAIL OF NARUTO UZUMAKI'
+            }
             input {
-                message 'Deploy?'
+                message 'Summoning Jutsu'
                 ok 'Do it!'
                 parameters {
-                    string(name: 'TARGET_ENVIRONMENT', defaultValue: 'PROD', description: 'Target deployment environment')
+                    string(name: 'NARUTO SAGE MODE', defaultValue: 'NARUTO UZUMAKI', description: 'PAIN VS NARUTO UZUMAKI')
                 }
             }
             steps {
-                echo "Deploying release ${RELEASE} to environment ${TARGET_ENVIRONMENT}"
+                 echo " ${RELEASE}"
+                echo "${END}"
             }
         }        
     }
     post{
         always {
-             echo 'Prints whether deploy happened or not, success or failure'
+             echo 'WAR ARC STARTED'
         }
     }
 }
