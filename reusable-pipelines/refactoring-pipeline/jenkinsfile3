@@ -61,7 +61,7 @@ pipeline {
 
     post {
         always {
-            cleanws()
+            echo " Post Build Action SUCCESS ${RELEASE_VERSION} Won the Fight"
         }
     }
 }
