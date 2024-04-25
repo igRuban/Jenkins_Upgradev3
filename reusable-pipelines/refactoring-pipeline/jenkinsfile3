@@ -33,7 +33,7 @@ pipeline {
 
         stage('Build') {
             environment {
-                VERSION_SUFFIX = "${sh(script:'if [ "${RELEASE}" = false ] ; then echo -n "${INT_VERSION}":  will Win the final valley -> "${BUILD_NUMBER}"; else echo -n "${RELEASE_VERSION}": Will win with out question -> "${BUILD_NUMBER}"; fi', returnStdout: true)}"
+                VERSION_SUFFIX = "${sh(script:'if [ "${RELEASE}" = false ] ; then echo -n "${INT_VERSION}":  will Win the final valley "${BUILD_NUMBER}"; else echo -n "${RELEASE_VERSION}": Will win with out question "${BUILD_NUMBER}"; fi', returnStdout: true)}"
             }
             steps {
                 echo "Building version: ${INT_VERSION} with suffix: ${VERSION_SUFFIX}"
